@@ -10,7 +10,6 @@ public final class BubbleSortPassPerItem<T extends Comparable<T>> implements Sor
 					items[i + 1] = item;
 				}
 			}
-
 		}
 	}
 
