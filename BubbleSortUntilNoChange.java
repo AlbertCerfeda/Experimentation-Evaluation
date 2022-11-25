@@ -1,6 +1,34 @@
-public final class BubbleSortUntilNoChange<T extends Comparable<T>> implements Sorter<T> {
+import java.lang.reflect.Array;
 
-	public void sort(final T[] items) {
+public final class BubbleSortUntilNoChange <T extends Comparable<T>> implements Sorter<T>, BenchmarkAlgo {
+	private T[] items;
+	
+	public BubbleSortUntilNoChange(Class<T> itemsClass) {
+		items = (T[])Array.newInstance(itemsClass,0);
+	}
+	@Override
+	public void parseArguments(Object... args){
+		items=(T[]) args[0];
+	}
+	
+	@Override
+	public void runSetup(){
+		boolean changed;
+		do{
+			changed=false;
+			for (int i=0; i<items.length-1; i++){
+				break;
+			}
+		} while (changed);
+	}
+	
+	@Override
+	public void runAlgorithm(){
+		sort(items);
+	}
+	
+	
+	public void sort(final T[] items){
 		boolean changed;
 		do {
 			changed = false;
@@ -14,5 +42,5 @@ public final class BubbleSortUntilNoChange<T extends Comparable<T>> implements S
 			}
 		} while (changed);
 	}
-
+	
 }

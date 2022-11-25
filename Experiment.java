@@ -1,19 +1,34 @@
+import java.io.IOException;
+
 public class Experiment {
 	
 	
-	public static void main(String[] args){
+	public static void main(String[] args) throws IOException{
 		
-		// initialize array
-		// set Independent Variables
+		// Sets up the algorithms to use
+		BenchmarkAlgo[] algos = {
+				new BubbleSortUntilNoChange<Integer>(Integer.class),
+				new BubbleSortPassPerItem<Integer>(Integer.class),
+				new BubbleSortWhileNeeded<Integer>(Integer.class)
+		};
 		
-		Sorter[] algos={new BubbleSortUntilNoChange<Integer>(), new BubbleSortUntilNoChange(), new BubbleSortWhileNeeded()};
-		Integer[] myArray={20, 15, 10};
+		// Sets up the input generates and retrieves the set of inputs.
+		InputGenerator generator = new InputGenerator();
+		generator.generateInputs();
 		
-		BenchmarkResults r1 = new Benchmark(algos[1], myArray, 7,100).runBenchmark();
+		// Sets up the CSV logger
+		CSVBenchmark csv = new CSVBenchmark("results.csv",false);
 		
-		System.out.println(
-				"===\n"+
-				"Algorithm: "+r1.getAlgorithm()+"\n"+
-				"AVG Time : "+r1.getAverageResult());
+		BenchmarkResults r1;
+		// Every input
+		for(Input<Integer[]> input : generator.getInputs())
+			// Every algorithm
+			for (BenchmarkAlgo algo : algos) {
+				r1 = new Benchmark(algo, input, 1000,100000).runBenchmark();
+				System.out.println(r1.toString());
+				// Logs to CSV
+				csv.append(r1);
+			}
+		csv.save();
 	}
 }
