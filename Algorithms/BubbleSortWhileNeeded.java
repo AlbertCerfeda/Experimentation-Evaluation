@@ -1,3 +1,7 @@
+package Algorithms;
+
+import Benchmark.BenchmarkAlgo;
+
 import java.lang.reflect.Array;
 
 public final class BubbleSortWhileNeeded<T extends Comparable<T>> implements Sorter<T>, BenchmarkAlgo {

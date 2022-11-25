@@ -1,3 +1,7 @@
+package Benchmark;
+
+import InputGenerator.Input;
+
 import java.util.Arrays;
 
 /**
@@ -6,19 +10,19 @@ import java.util.Arrays;
 public class Benchmark {
 	
 	private final BenchmarkAlgo algo;
-	private Input<Integer[]> input;
+	private Input<Object[]> input;
 	private int warmupRuns;
 	private int actualRuns;
 	
 	
 	/**
-	 * Constructor for Benchmark object.
+	 * Constructor for Benchmark.Benchmark object.
 	 * @param algo the algorithm to measure.
 	 * @param input the input to be supplied to the benchmarked algorithm.
 	 * @param warmupRuns how many unmeasured runs to perform. Useful for warming up the cache.
 	 * @param actualRuns how many actual measured runs to perform.
 	 */
-	public Benchmark(BenchmarkAlgo algo, Input<Integer[]> input, int warmupRuns, int actualRuns) {
+	public Benchmark(BenchmarkAlgo algo, Input input, int warmupRuns, int actualRuns) {
 		this.algo =algo;
 		this.input=input;
 		this.warmupRuns = warmupRuns;
@@ -33,11 +37,12 @@ public class Benchmark {
 	 */
 	public BenchmarkResults runBenchmark() {
 		BenchmarkResults results = new BenchmarkResults(algo,input);
-		Integer[] newinput;
+		Object[] newinput;
 		
 		long startTime, endTime, setupTime;
 		for (int i = 0; i < warmupRuns+actualRuns; i++) { // i < iterations; // since the global number iterations includes the warmupRuns (iterations = warmupRuns + actualRuns)
 			// Creates new fresh copy of the input set
+			
 			newinput = Arrays.copyOf(input.value, input.value.length);
 			
 			// 1. The algorithm parses the input set.

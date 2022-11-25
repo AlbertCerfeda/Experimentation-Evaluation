@@ -1,3 +1,5 @@
+package Benchmark;
+
 /**
  * Interface for algorithms to be benchmarked.
  */

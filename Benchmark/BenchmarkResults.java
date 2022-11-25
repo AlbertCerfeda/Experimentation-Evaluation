@@ -1,3 +1,7 @@
+package Benchmark;
+
+import InputGenerator.Input;
+
 import java.util.LinkedList;
 import java.util.List;
 
@@ -64,12 +68,11 @@ public class BenchmarkResults {
 	@Override
 	public String toString() {
 		return "Algorithm: "+algorithm_name+"\n"+
-				"Input type: " + input.name+"\n"+
+				"InputGenerator.Input type: " + input.name+"\n"+
 				"\t\t\t>" + input.description+"\n"+
 				"Warmup runs: "+getWarmupRunsNumber()+"\n"+
 				"Actual runs: "+getActualRunsNumber()+"\n"+
 				"AVG Time : "+getAverageResult() +"\n";
-//				"Input :" + input.value.toString();
 	}
 	
 }

@@ -1,3 +1,5 @@
+package InputGenerator;
+
 /**
  * Classifies a certain input to be given to an algorithm to be benchmarked.
  * @param <T> the type of the inputs type.
