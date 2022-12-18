@@ -7,36 +7,26 @@ export default createStore({
 
         },
         getTestInfo: () => async (testset, testname) => {
-            return {
-                testname: testname,
-                options: [{}, {}, {}, {}, {}, {}]
-            }
-        },
-        getTestSet: () => async (testset) => {
-            return [{
-                testname: "#1.1",
-                options: [{}, {}, {}, {}, {}, {}]
-            },
-                {
-                    testname: "#1.2",
-                    options: [{}, {}, {}, {}, {}, {}]
-                }, {
-                    testname: "#1.3",
-                    options: [{}, {}, {}, {}, {}, {}]
-                }]
+            const url = `${import.meta.env.VITE_BACKEND_URL}/test?testset=${testset}&testname=${testname}&info=true`
+            console.log('GET '+url)
+            return await (await fetch(url)).json()
         },
         getTest: () => async (testset, testname) => {
-            return {
-                testname: testname,
-                word: "banana",
-                options: [{text: "banana"}, {text: "banana"}, {text: "banana"}, {text: "banana"}, {text: "banana"}, {text: "banana"}]
-            }
+            const url = `${import.meta.env.VITE_BACKEND_URL}/test?testset=${testset}&testname=${testname}`
+            console.log('GET '+url)
+            return await (await fetch(url)).json()
         },
+
+        getTestSet: () => async (testset) => {
+            const url = `${import.meta.env.VITE_BACKEND_URL}/testset?testset=${testset}&info=true`
+            console.log('GET '+url)
+            return await (await fetch(url)).json()
+        },
+
         sendTest: () => async (testset, testname, answer) => {
-            return {
-                elapsed: new Date(),
-                correct: false
-            }
+            const url = `${import.meta.env.VITE_BACKEND_URL}/test?testset=${testset}&testname=${testname}&answer=${answer}`
+            console.log('POST: '+url)
+            return await (await fetch(url,{method:"POST"})).json()
         }
     },
     mutations: {},

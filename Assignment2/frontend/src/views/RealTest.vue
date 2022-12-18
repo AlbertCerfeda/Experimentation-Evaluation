@@ -1,6 +1,6 @@
 <template>
   <v-container fluid class="h-100 pa-0 bg-white text-red d-flex justify-center align-center flex-column">
-      <TestSet ref="testset" testset="init"
+      <TestSet ref="testset" testset="realtest"
                :modal_onsubmit="endDemo"/>
   </v-container>
 </template>

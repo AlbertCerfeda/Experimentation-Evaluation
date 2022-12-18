@@ -1,0 +1,53 @@
+{
+  "init" : {
+    "tests": [
+      {
+        "testname": "1.1",
+        "word": "banana",
+        "options": [{"text": "banana"}, {"text": "banana"}, {"text": "banana"}, {"text": "banana"}, {"text": "banana"}, {"text": "banana"}],
+        "correct": "banana"
+      },
+      {
+        "testname": "1.2",
+        "word": "banana",
+        "options": [{"text": "banana"}, {"text": "banana"}, {"text": "banana"}, {"text": "banana"}, {"text": "banana"}, {"text": "banana"}],
+        "correct": "banana"
+      },
+      {
+        "testname": "1.3",
+        "word": "banana",
+        "options": [{"text": "banana"}, {"text": "banana"}, {"text": "banana"}, {"text": "banana"}, {"text": "banana"}, {"text": "banana"}],
+        "correct": "banana"
+      }
+    ]
+  },
+
+  "realtest" : {
+    "tests": [
+      {
+        "testname": "2.1",
+        "word": "banana",
+        "options": [{"text": "banana"}, {"text": "banana"}, {"text": "banana"}, {"text": "banana"}, {"text": "banana"}, {"text": "banana"}],
+        "correct": "banana"
+      },
+      {
+        "testname": "2.2",
+        "word": "banana",
+        "options": [{"text": "banana"}, {"text": "banana"}, {"text": "banana"}, {"text": "banana"}, {"text": "banana"}, {"text": "banana"}],
+        "correct": "banana"
+      },
+      {
+        "testname": "2.3",
+        "word": "banana",
+        "options": [{"text": "banana"}, {"text": "banana"}, {"text": "banana"}, {"text": "banana"}, {"text": "banana"}, {"text": "banana"}],
+        "correct": "banana"
+      },
+      {
+        "testname": "2.3",
+        "word": "banana",
+        "options": [{"text": "banana"}, {"text": "banana"}, {"text": "banana"}, {"text": "banana"}, {"text": "banana"}, {"text": "banana"}],
+        "correct": "banana"
+      }
+    ]
+  }
+}

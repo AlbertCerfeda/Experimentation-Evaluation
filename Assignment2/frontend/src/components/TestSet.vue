@@ -101,9 +101,7 @@ export default defineComponent({
     }
   },
   async beforeMount() {
-    console.log(this.testset)
-    this.tests = await store.getters.getTestSet(this.testset)
-    console.log(this.tests)
+    this.tests = (await store.getters.getTestSet(this.testset)).tests
   }
 })
 </script>

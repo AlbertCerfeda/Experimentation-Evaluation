@@ -1,6 +1,7 @@
 <template>
   <v-container fluid class="h-100 pa-0 bg-white text-red d-flex justify-center align-center flex-column">
-      <TestSet ref="testset" v-if="currentStep==3" testset="init"
+      <TestSet ref="testset" v-if="currentStep==3"
+               testset="init"
                modal_canceltext="Repeat demo"
                modal_submittext="Go to real test"
                modal_description="This was an example demo Test Set similar to the one that you may encounter."
@@ -21,7 +22,6 @@
 
 <script>
 import { defineComponent } from "vue";
-import Test from "@/components/Test.vue";
 import TestSet from "@/components/TestSet.vue";
 import router from "@/router";
 

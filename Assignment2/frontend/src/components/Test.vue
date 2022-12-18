@@ -115,7 +115,6 @@ export default defineComponent({
   },
   async beforeMount() {
     this.test = await store.getters.getTestInfo(this.testset, this.testname)
-    console.log(this.test)
   },
 
   methods: {
