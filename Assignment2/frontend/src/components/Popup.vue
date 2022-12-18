@@ -2,7 +2,7 @@
       <v-dialog
           v-model="is_form_open"
       >
-        <v-card class="mx-auto w-50 rounded-lg">
+        <v-card class="mx-auto w-33 rounded-lg">
           <v-card-title class="ma-4">
             <h2>{{this.title}}</h2>
           </v-card-title>

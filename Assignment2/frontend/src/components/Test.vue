@@ -1,6 +1,6 @@
 <template>
   <v-container fluid class="h-100 d-flex justify-center align-center flex-column">
-    <v-container class="w-50 h-75 bg-blue-grey-darken-3 rounded-lg">
+    <v-container class="w-50 bg-blue-grey-darken-3 rounded-lg" style="height: 85%">
       <v-container fluid class="h-25 w-100 h-25 d-flex flex-column justify-end align-center pa-0">
         <h2 class="text-h5"> You are about to perform test</h2>
         <h1 class="text-h4 ma-2 mb-5 font-weight-bold">{{ test.testname }}</h1>
@@ -9,6 +9,7 @@
 
 
         <v-progress-linear
+            class="flex-shrink-0"
             height="30"
             :model-value="testStartCountdown"
             @click="initiateCountdown()"
@@ -18,6 +19,10 @@
           <v-btn v-else variant="tonal">Start countdown</v-btn>
 
         </v-progress-linear>
+          <v-btn @click="this.oncomplete" variant="outlined" class="mt-3" :style="`opacity: ${this.test_results.correct!==undefined?'1':'0'}`">
+            Next Question
+          </v-btn>
+
       </v-container>
       <v-container fluid class="h-75 w-75 h-50 d-flex justify-space-around align-center flex-wrap">
         <AnswerButton @click="onanswerclick(option.text, idx)" :style="`flex-basis: 33.33333%`" :class="`h-25 flex-grow-1 flex-shrink-0 ${test_results.correct!==undefined && selected_option===idx? test_results.correct?'bg-green':'bg-red' :''}`" v-for="(option, idx) in test.options" :key="idx" :disabled="!is_test_running && selected_option!=idx" :selected="selected_option===idx" :text="option.text" />
@@ -121,10 +126,10 @@ export default defineComponent({
       this.is_countingdown = true
       this.show_timer = true
 
-      let i = 20
+      let i = 100
       let interval = setInterval(()=>{
         this.testStartCountdown = i
-        i-=10
+        i-=20
         if (i< 0) {
           clearInterval(interval)
           this.initiateTest()
@@ -151,10 +156,7 @@ export default defineComponent({
       this.stopWatch.stop()
       this.is_test_running = false
       this.test_results = await store.getters.sendTest(this.testset, this.testname, answer)
-      console.log(this.test_results)
       this.stopWatch.timer = this.stopWatch.formatDate(this.test_results.elapsed)
-
-      this.oncomplete()
     },
 
 

@@ -35,8 +35,7 @@ export default defineComponent({
   },
   data() {
     return {
-      currentStep: 1,
-      showcontent: true
+      currentStep: 1
     }
   },
   async beforeMount() {
