@@ -1,7 +1,13 @@
 <template>
   <v-container fluid class="h-100 pa-0 bg-white text-red d-flex justify-center align-center flex-column">
-    <TestSet v-if="currentStep==3" testset="init"/>
-    <template v-if="currentStep==1">
+      <TestSet ref="testset" v-if="currentStep==3" testset="init"
+               modal_canceltext="Repeat demo"
+               modal_submittext="Go to real test"
+               modal_description="This was an example demo Test Set similar to the one that you may encounter."
+               modal_dismissable=true
+               :modal_oncancel="repeatdemo"
+               :modal_onsubmit="endDemo"/>
+      <template v-if="currentStep==1">
         Description of the test
         This test is a test => Description
         <v-btn variant="outlined" class="mt-9" @click="currentStep++">I carefully read the experiment description</v-btn>
@@ -17,20 +23,20 @@
 import { defineComponent } from "vue";
 import Test from "@/components/Test.vue";
 import TestSet from "@/components/TestSet.vue";
+import router from "@/router";
 
 // Components
 
 export default defineComponent({
-  testname: "init",
+  name: "init",
 
   components: {
-    TestSet,
-    Test
-
+    TestSet
   },
   data() {
     return {
-      currentStep: 1
+      currentStep: 1,
+      showcontent: true
     }
   },
   async beforeMount() {
@@ -38,7 +44,13 @@ export default defineComponent({
   },
 
   methods: {
-
+    repeatdemo() {
+      this.$refs.testset.restart()
+    },
+    endDemo() {
+      router.push({path:'/test'})
+      router.forward()
+    }
   }
 });
 </script>

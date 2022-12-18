@@ -4,36 +4,29 @@
       >
         <v-card class="mx-auto w-50 rounded-lg">
           <v-card-title class="ma-4">
-            <h2>Query feedback</h2>
+            <h2>{{this.title}}</h2>
           </v-card-title>
           <v-card-text class="ma-4">
             <v-container>
-              <v-row>
-                <v-col cols="12">
-
-                </v-col>
-                <v-col cols="12">
-
-                </v-col>
-              </v-row>
+              {{this.description}}
             </v-container>
-            <small>*indicates required field</small>
           </v-card-text>
           <v-card-actions class="ma-4">
             <v-spacer></v-spacer>
             <v-btn
+                v-if="dismissable"
                 color="blue-darken-1"
                 variant="text"
-                @click="is_form_open = false"
+                @click="cancel"
             >
-              Close
+              {{canceltext}}
             </v-btn>
             <v-btn
                 color="red-darken-1"
                 variant="text"
                 @click="submit"
             >
-              Submit
+              {{submittext}}
             </v-btn>
           </v-card-actions>
         </v-card>
@@ -46,18 +39,10 @@ import { defineComponent } from "vue";
 import store from "@/store";
 
 export default defineComponent({
-  name: "FeedbackForm",
+  name: "Popup",
   data() {
     return {
       is_form_open: this.immediately_open,
-    }
-  },
-  watch: {
-    'query': {
-      handler() {
-        this.form_data.query = this.query
-      },
-      immediate: true
     }
   },
 
@@ -66,8 +51,36 @@ export default defineComponent({
       type: Boolean,
       default: false
     },
-    query: {
+    dismissable: {
+      type: Boolean,
+      default: true
+    },
+
+    title: {
       type: String,
+      default: ""
+    },
+    description: {
+      type: String,
+      default: ""
+    },
+
+    submittext: {
+      type: String,
+      default: "Continue"
+    },
+    canceltext: {
+      type: String,
+      default: "Cancel"
+    },
+
+    oncancel: {
+      type: Function,
+      default: ()=>{}
+    },
+    onsubmit: {
+      type: Function,
+      default: ()=>{}
     }
   },
 
@@ -77,14 +90,12 @@ export default defineComponent({
     },
 
     submit() {
-      this.is_loading = true
-      setTimeout(()=>store.getters.sendFeedback({
-        query: this.form_data.query,
-        description: this.form_data.description,
-      }).then(()=>{
-        this.is_loading = false
-        this.is_form_open = false
-      }),250)
+      this.is_form_open = false;
+      this.onsubmit()
+    },
+    cancel() {
+      this.is_form_open = false;
+      this.oncancel()
     }
   },
 

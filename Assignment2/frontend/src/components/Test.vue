@@ -32,11 +32,12 @@
 import { defineComponent } from "vue";
 import AnswerButton from "@/components/AnswerButton.vue";
 import store from "@/store";
+import Popup from "@/components/Popup.vue";
 
 // Components
 
 export default defineComponent({
-  testname: "test",
+  testname: "Test",
 
   props: {
     testset: {
@@ -55,6 +56,7 @@ export default defineComponent({
 
 
   components: {
+    Popup,
     AnswerButton
 
   },
