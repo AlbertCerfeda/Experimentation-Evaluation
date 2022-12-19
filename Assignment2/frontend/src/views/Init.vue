@@ -14,7 +14,7 @@
         <v-btn variant="outlined" class="mt-9" @click="currentStep++">I carefully read the experiment description</v-btn>
       </template>
       <template v-if="currentStep==2">
-        Form
+        <Form/>
         <v-btn variant="outlined" class="mt-9" @click="currentStep++">Demo test</v-btn>
       </template>
   </v-container>
@@ -24,6 +24,7 @@
 import { defineComponent } from "vue";
 import TestSet from "@/components/TestSet.vue";
 import router from "@/router";
+import Form from "@/components/Form.vue";
 
 // Components
 
@@ -31,7 +32,8 @@ export default defineComponent({
   name: "init",
 
   components: {
-    TestSet
+    TestSet,
+    Form
   },
   data() {
     return {
