@@ -1,7 +1,7 @@
 <template>
 
   <v-app>
-    <v-navigation-drawer v-model="sidebar" app>
+    <!-- <v-navigation-drawer v-model="sidebar" app>
       <v-list>
         <v-list-tile
             v-for="item in menuItems"
@@ -13,9 +13,9 @@
           <v-list-tile-content>{{ item.title }}</v-list-tile-content>
         </v-list-tile>
       </v-list>
-    </v-navigation-drawer>
+    </v-navigation-drawer> -->
 
-    <v-toolbar app>
+    <!-- <v-toolbar app>
       <span class="hidden-sm-and-up">
         <v-toolbar-side-icon @click="sidebar = !sidebar">
         </v-toolbar-side-icon>
@@ -36,7 +36,7 @@
           {{ item.title }}
         </v-btn>
       </v-toolbar-items>
-    </v-toolbar>
+    </v-toolbar> -->
 
     <v-content class="w-100 h-100">
       <router-view></router-view>
