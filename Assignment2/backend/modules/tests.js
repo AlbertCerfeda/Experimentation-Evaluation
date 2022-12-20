@@ -43,7 +43,7 @@ async function getTestInfo(testset, testname) {
 }
 
 async function isAnswerCorrect(testset, testname, answer) {
-    return await getTest(testset, testname, false).correct == answer
+    return (await getTest(testset, testname, false)).correct == answer
 }
 
 
