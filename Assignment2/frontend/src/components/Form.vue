@@ -1,6 +1,5 @@
 <!-- form template in Vue -->
 <template>
-    <v-form v-model="valid">
     <v-container fluid class="h-100 pa-0 bg-white text-red d-flex justify-center align-center flex-column">
         <v-row class="d-flex justify-center align-center flex-column">
         <v-col cols="12" md="8" lg="6">
@@ -32,7 +31,7 @@
                 <v-select
                     v-model="genders.selected"
                     :items="genders"
-                    :rules="[v => !!v || 'PLs insert gender']"
+                    :rules="[v => !!v || 'Please inser gender']"
                     label="Gender"
                     required
                 ></v-select>
@@ -58,7 +57,7 @@
                     <v-select
                         v-model="time.selected"
                         :items="time"
-                        :rules="[]"
+                        :rules="[v => !!v || 'Please select an option']"
                         label="How long have you been programming?"
                         required
                     ></v-select>
@@ -67,7 +66,7 @@
                     <v-select
                         v-model="hours.selected"
                         :items="hours"
-                        :rules="[]"
+                        :rules="[v => !!v || 'Please select an option']"
                         label="How much hours do you spend coding during a day?"
                         required
                     ></v-select>
@@ -76,7 +75,7 @@
                     <v-select
                         v-model="IDE.selected"
                         :items="IDE"
-                        :rules="[]"
+                        :rules="[v => !!v || 'Please select an option']"
                         label="What IDE do you use?"
                         required
                     ></v-select>
@@ -89,18 +88,15 @@
                     label="I agree to the terms and conditions"
                     required
                 ></v-checkbox>
-                <v-text-field>
-                    <template v-slot:append>
+                <section v-if="checkboxA">
                     <v-btn color="primary" @click="submit">Submit</v-btn>
-                    </template>
-                </v-text-field>
+                </section>
                 </v-form>
                 </v-card-text>
             </v-card>
             </v-col>
             </v-row>
         </v-container>
-    </v-form>   
 </template>
 
 <script>
@@ -127,11 +123,6 @@ export default defineComponent({
             (v) => !!v || "E-mail is required",
             (v) => /.+@.+\..+/.test(v) || "E-mail must be valid",
         ],
-        phone: "",
-        phoneRules: [
-            (v) => !!v || "Phone is required",
-            (v) => (v && v.length <= 10) || "Phone must be less than 10 characters",
-        ],
         age: "",
         ageRules: [
             (v) => !!v || "Age is required",
@@ -142,7 +133,7 @@ export default defineComponent({
         checkboxA: false,
         agreementRules: [(v) => !!v || 'You must agree to continue'],
 
-        genders: ["Female", "Male", "Magic"],
+        genders: ["Female", "Male", "Other"],
 
         programmingLanguages: [
             { id: 1, name: "Java", selected: false },
@@ -151,6 +142,7 @@ export default defineComponent({
             { id: 4, name: "C++", selected: false },
             { id: 5, name: "C#", selected: false },
             { id: 6, name: "C", selected: false },
+            { id: 7, name: "Other", selected: false },
         ],
 
         time: ["Less than 1 year", "1-3 years", "3-5 years", "5-10 years", "More than 10 years"],
@@ -169,7 +161,20 @@ export default defineComponent({
         async submit() {
           console.log(await this.$refs.form.validate())
           if ((await this.$refs.form.validate()).valid) {
-            store.commit('registerClient', {ciao: 'mamma'})
+            console.log("Validation Success")
+            let client = {
+                name: this.name,
+                email: this.email,
+                age: this.age,
+                gender: this.genders.selected,
+                programmer: this.checkboxP,
+                programmingLanguages: this.programmingLanguages.filter((language) => language.selected),
+                time: this.time.selected,
+                hours: this.hours.selected,
+                IDE: this.IDE.selected,
+            }
+            console.log(client)
+            store.commit('registerClient', client)
             this.onsubmit()
           } else {
             console.log("Validation Failed")
