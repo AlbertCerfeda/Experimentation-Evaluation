@@ -176,7 +176,7 @@ export default defineComponent({
                 IDE: this.IDE.selected,
             }
             console.log(client)
-            // store.commit('registerClient', client)
+            store.commit('registerClient', client)
             this.onsubmit()
           } else {
             console.log("Validation Failed")
