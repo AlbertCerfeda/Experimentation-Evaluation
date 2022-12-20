@@ -1,22 +1,31 @@
 const { v4: uuidv4 } = require('uuid');
 const tests = require('./tests')
+const _ = require('lodash')
 
 const users = {}
 
 function addUser(token, obj) {
     users[token] = obj
     console.log("Users: ", users)
-    return {token,user: {...users[token]}}
+    return {token,user: _.cloneDeep(users[token])}
 }
 function getUser(token) {
     if (users[token]===undefined)
         return
     console.log("Users: ", users)
-    return {...users[token]}
+    return _.cloneDeep(users[token])
 }
+
 function deleteUser(token) {
     delete users[token]
 }
+function isValidUser(token) {
+    return token !== undefined && users[token] !== undefined
+}
+function hasUserAccess(token, testset, testname) {
+    return true
+}
+
 
 
 
@@ -51,7 +60,37 @@ function createUser(form) {
 
 
 
+function startAttempt(token, testset, testname) {
+    let user = getUser(token)
+    let test = user.stats[testset].tests.find((t)=>t.testname === testname)
+
+    test.start = new Date()
+    addUser(token, user)
+}
+function endAttempt(token, testset, testname, answer) {
+    let user = getUser(token)
+    let test = user.stats[testset].tests.find((t)=>t.testname === testname)
+
+    test.end = new Date()
+    test.elapsed = test.end - test.start
+    test.correct = tests.isAnswerCorrect(testset, testname, answer)
+    console.log(user.stats[testset])
+    addUser(token, user)
+    return {
+        elapsed: test.elapsed,
+        correct: test.correct
+    }
+}
+
+
+
+
 
 module.exports = {
-    createUser
+    createUser,
+    isValidUser,
+    startAttempt,
+    endAttempt,
+
+    hasUserAccess
 }

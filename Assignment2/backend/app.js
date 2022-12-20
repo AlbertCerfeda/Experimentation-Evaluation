@@ -50,11 +50,11 @@ app.use(function (req, res, next) {
 // development error handler
 // will print stacktrace
 app.use(function (err, req, res, next) {
-    res.status(err.status || 500);
-    res.json({
+    console.log({
         message: err.message,
         error: err
-    });
+    })
+    res.status(500)
 });
 
 

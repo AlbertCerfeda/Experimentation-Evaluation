@@ -41,6 +41,13 @@ function isAnswerCorrect(testset, testname, answer) {
     return getTest(testset, testname,false).correct == answer
 }
 
+function isValidTestSet(testset) {
+    return testsets[testset] !== undefined
+}
+function isValidTest(testset, testname) {
+    return isValidTestSet(testset) && testsets[testset].tests.find((t) => t.testname === testname) !== undefined
+}
+
 
 
 
@@ -50,6 +57,8 @@ module.exports = {
     getTestSetInfo,
     getTestInfo,
     getTest,
+    isValidTest,
+    isValidTestSet,
 
     isAnswerCorrect
 }
