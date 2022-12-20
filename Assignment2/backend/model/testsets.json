@@ -4,20 +4,14 @@
       {
         "testname": "1.1",
         "word": "ciao mamma",
-        "options": [{"text": "ciao-mama"}, {"text": "caio-mamma"}, {"text": "ciao-mamma"}, {"text": "cia-omamma"}, {"text": "ciaomama"}, {"text": "ciao-mamm"}],
-        "correct": "ciao-mamma"
-      },
-      {
-        "testname": "1.2",
-        "word": "ciao mamma",
         "options": [{"text": "caoMamma"}, {"text": "ciaoMama"}, {"text": "ciaoMamm"}, {"text": "Ciaomama"}, {"text": "ciaoMamma"}, {"text": "caioMamma"}],
         "correct": "ciaoMamma"
       },
       {
-        "testname": "1.3",
+        "testname": "1.2",
         "word": "ciao mamma",
-        "options": [{"text": "ciao mamma"}, {"text": "ciao mamma"}, {"text": "ciao mamma"}, {"text": "ciao mamma"}, {"text": "ciao mamma"}, {"text": "ciao mamma"}],
-        "correct": "ciao mamma"
+        "options": [{"text": "ciao-mama"}, {"text": "caio-mamma"}, {"text": "ciao-mamma"}, {"text": "cia-omamma"}, {"text": "ciaomama"}, {"text": "ciao-mamm"}],
+        "correct": "ciao-mamma"
       }
     ]
   },
