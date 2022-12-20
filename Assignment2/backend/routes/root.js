@@ -98,9 +98,14 @@ router.post('/register',async function (req, res) {
         res.status(400).end()
         return
     }
-    let newuser = await users.createUser(formdata)
 
-    res.json({token: newuser.token})
+    users.createUser(formdata).then((newuser)=>{
+        res.json({token: newuser.token})
+    }).catch((err)=>{
+        console.error(err)
+        res.status(400).end()
+    })
+
 })
 
 module.exports = router;

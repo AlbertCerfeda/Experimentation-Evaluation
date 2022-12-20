@@ -45,20 +45,17 @@ export default createStore({
         }
     },
     mutations: {
-        registerClient(state, formData) {
-            async function register(){
-                const url = `${import.meta.env.VITE_BACKEND_URL}/register`
-                console.log('POST: ' + url)
-                state.token = (await (await fetch(url, {
-                        method: "POST",
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({formdata: formData})
-                    })
-                ).json()).token
-            }
-            register()
+        async registerClient(state, formData) {
+            const url = `${import.meta.env.VITE_BACKEND_URL}/register`
+            console.log('POST: ' + url)
+            state.token = (await (await fetch(url, {
+                    method: "POST",
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({formdata: formData})
+                })
+            ).json()).token
         }
     },
     actions: {},
