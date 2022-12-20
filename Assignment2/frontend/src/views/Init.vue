@@ -9,8 +9,12 @@
                :modal_oncancel="repeatdemo"
                :modal_onsubmit="endDemo"/>
       <template v-if="currentStep==1">
-        Description of the test
-        This test is a test => Description
+        <p>This test aims to measure how the use of different word separators affects text speed and comprehension.</p>
+        <p>In particular, examples of two popular separator styles in programming will be shown:</p>
+        <p>camelCase and kebab-case</p>
+        <br>
+        <p>The mechanics of the test are simple:</p>
+        <p> a sentence or a series of words will be displayed and you will have to select the correct answer as quickly as possible!</p>
         <v-btn variant="outlined" class="mt-9" @click="currentStep++">I carefully read the experiment description</v-btn>
       </template>
       <template v-if="currentStep==2">

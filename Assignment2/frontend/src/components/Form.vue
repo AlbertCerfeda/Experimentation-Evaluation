@@ -88,9 +88,9 @@
                     label="I agree to the terms and conditions"
                     required
                 ></v-checkbox>
-                <section v-if="checkboxA">
+                <!-- <section v-if="checkboxA">
                     <v-btn color="primary" @click="submit">Submit</v-btn>
-                </section>
+                </section> -->
                 </v-form>
                 </v-card-text>
             </v-card>
@@ -116,7 +116,7 @@ export default defineComponent({
         name: "",
         nameRules: [
             (v) => !!v || "Name is required",
-            (v) => (v && v.length <= 10) || "Name must be less than 10 characters",
+            (v) => (v && v.length <= 15) || "Name must be less than 15 characters",
         ],
         email: "",
         emailRules: [
@@ -127,6 +127,8 @@ export default defineComponent({
         ageRules: [
             (v) => !!v || "Age is required",
             (v) => (v && v.length <= 3) || "Age must be less than 3 characters",
+            (v) => !isNaN(v) || "Age must be a number",
+            (v) => (v && v >= 18) || "You must be at least 18 years old to continue",
         ],
         checkboxP: false,
 
@@ -174,7 +176,7 @@ export default defineComponent({
                 IDE: this.IDE.selected,
             }
             console.log(client)
-            store.commit('registerClient', client)
+            // store.commit('registerClient', client)
             this.onsubmit()
           } else {
             console.log("Validation Failed")
