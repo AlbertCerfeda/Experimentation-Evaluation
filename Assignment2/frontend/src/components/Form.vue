@@ -167,7 +167,7 @@ export default defineComponent({
     },
     methods: {
         async submit() {
-          if (await this.$refs.form.validate()) {
+          if (await this.$refs.form.validate().valid) {
             store.commit('registerClient', {ciao: 'mamma'})
             this.onsubmit()
           } else {
