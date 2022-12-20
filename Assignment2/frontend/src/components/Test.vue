@@ -114,7 +114,7 @@ export default defineComponent({
     }
   },
   async beforeMount() {
-    this.test = await store.getters.getTestInfo(this.testset, this.testname)
+    this.test = await store.getters.getTestInfo(await store.getters.awaitToken(store), this.testset, this.testname)
   },
 
   methods: {
@@ -138,7 +138,7 @@ export default defineComponent({
 
     async initiateTest() {
       this.is_countingdown = false
-      this.test = await store.getters.getTest(this.testset, this.testname)
+      this.test = await store.getters.getTest(await store.getters.awaitToken(store),this.testset, this.testname)
       this.is_test_running = true
       this.stopWatch.start()
     },
@@ -154,7 +154,7 @@ export default defineComponent({
     async sendTest(answer) {
       this.stopWatch.stop()
       this.is_test_running = false
-      this.test_results = await store.getters.sendTest(this.testset, this.testname, answer)
+      this.test_results = await store.getters.sendTest(await store.getters.awaitToken(store),this.testset, this.testname, answer)
       this.stopWatch.timer = this.stopWatch.formatDate(this.test_results.elapsed)
     },
 

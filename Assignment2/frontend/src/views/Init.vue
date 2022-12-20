@@ -14,8 +14,8 @@
         <v-btn variant="outlined" class="mt-9" @click="currentStep++">I carefully read the experiment description</v-btn>
       </template>
       <template v-if="currentStep==2">
-        <Form/>
-        <v-btn variant="outlined" class="mt-9" @click="currentStep++">Demo test</v-btn>
+        <Form ref="form" :onsubmit="onsubmit"/>
+        <v-btn variant="outlined" class="mt-9" @click="this.$refs.form.submit()">Demo test</v-btn>
       </template>
   </v-container>
 </template>
@@ -25,6 +25,7 @@ import { defineComponent } from "vue";
 import TestSet from "@/components/TestSet.vue";
 import router from "@/router";
 import Form from "@/components/Form.vue";
+import store from "@/store";
 
 // Components
 
@@ -45,6 +46,10 @@ export default defineComponent({
   },
 
   methods: {
+    async onsubmit() {
+      await store.getters.awaitToken(store)
+      this.currentStep++
+    },
     repeatdemo() {
       this.$refs.testset.restart()
     },

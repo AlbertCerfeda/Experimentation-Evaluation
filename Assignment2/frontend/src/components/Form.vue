@@ -105,6 +105,7 @@
 
 <script>
 import { defineComponent } from "vue";
+import store from "@/store";
 
 export default defineComponent({
     name: "Form",
@@ -158,12 +159,20 @@ export default defineComponent({
 
         };
     },
-
+    props: {
+      onsubmit: {
+        type: Function,
+        default: ()=>{}
+      }
+    },
     methods: {
-        submit() {
-            if (this.$refs.form.validate()) {
-                alert("Form submitted!");
-            }
+        async submit() {
+          if (await this.$refs.form.validate()) {
+            store.commit('registerClient', {ciao: 'mamma'})
+            this.onsubmit()
+          } else {
+            console.log("Validation Failed")
+          }
         },
     },
 });

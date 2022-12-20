@@ -86,9 +86,7 @@ export default defineComponent({
   },
   methods: {
     oncomplete() {
-      console.log("banana")
       this.currentStep += 1
-      console.log(this.currentStep, this.tests.length)
       if(this.currentStep === this.tests.length) {
         this.$refs.popup.open()
         return
@@ -101,7 +99,7 @@ export default defineComponent({
     }
   },
   async beforeMount() {
-    this.tests = (await store.getters.getTestSet(this.testset)).tests
+    this.tests = (await store.getters.getTestSet(await store.getters.awaitToken(store),this.testset)).tests
   }
 })
 </script>

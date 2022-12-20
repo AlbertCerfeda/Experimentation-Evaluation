@@ -1,16 +1,20 @@
 const fs = require('fs')
+const _ = require('lodash');
 
 const testsets = JSON.parse(fs.readFileSync("./model/testsets.json"))
 console.log(testsets)
 
 function getTest(testset, testname, dto=true) {
-    let test = {...getTestSet(testset).tests.find((t) => t.testname === testname)}
+    let test = _.cloneDeep(getTestSet(testset).tests.find((t) => t.testname === testname))
     if(dto)
         delete test.correct
     return test
 }
 function getTestSet(testset) {
-    return testsets[testset]
+    return _.cloneDeep(testsets[testset])
+}
+function getAllTestSets() {
+    return _.cloneDeep(testsets)
 }
 
 
@@ -24,7 +28,7 @@ function stripSensiviteTestInfo(obj) {
     }
 }
 function getTestSetInfo(testset) {
-    let tests = {...getTestSet(testset)}
+    let tests = getTestSet(testset)
     tests.tests = tests.tests.map((t)=>stripSensiviteTestInfo(t))
     return tests
 }
@@ -34,7 +38,6 @@ function getTestInfo(testset, testname) {
 }
 
 function isAnswerCorrect(testset, testname, answer) {
-    console.log(getTest(testset, testname,false), answer)
     return getTest(testset, testname,false).correct == answer
 }
 
@@ -43,6 +46,7 @@ function isAnswerCorrect(testset, testname, answer) {
 
 
 module.exports = {
+    getAllTestSets,
     getTestSetInfo,
     getTestInfo,
     getTest,

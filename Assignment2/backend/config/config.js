@@ -9,8 +9,8 @@ const rate_limit = require("express-rate-limit");
 
 ///////////////////
 // Initializes some settings that depend on whether the application is getting deployed locally or remotely
-const PORT = 8889
-const HOST = "localhost"
+const PORT = process.env.PORT || 8888
+const HOST = process.env.HOST || "localhost"
 ///////////////////
 
 const settings = {

@@ -1,35 +1,66 @@
 import {createStore} from "vuex";
+import {store} from "core-js/internals/reflect-metadata";
 
 export default createStore({
-    state: {},
+    state () {
+        return {
+            token: undefined
+        }
+    },
     getters: {
-        registerClient: () => async () => {
-
+        awaitToken: ()=> (store) => {
+            return new Promise((resolve) => {
+                function wait() {
+                    if (store.state.token === undefined) {
+                        setTimeout(wait, 50)
+                        return
+                    }
+                    resolve(store.state.token)
+                }
+                wait()
+            })
         },
-        getTestInfo: () => async (testset, testname) => {
-            const url = `${import.meta.env.VITE_BACKEND_URL}/test?testset=${testset}&testname=${testname}&info=true`
+
+        getTestInfo: () => async (token, testset, testname) => {
+            const url = `${import.meta.env.VITE_BACKEND_URL}/test?testset=${testset}&testname=${testname}&info=true&token=${token}`
             console.log('GET '+url)
             return await (await fetch(url)).json()
         },
-        getTest: () => async (testset, testname) => {
-            const url = `${import.meta.env.VITE_BACKEND_URL}/test?testset=${testset}&testname=${testname}`
+        getTest: () => async (token, testset, testname) => {
+            const url = `${import.meta.env.VITE_BACKEND_URL}/test?testset=${testset}&testname=${testname}&token=${token}`
             console.log('GET '+url)
             return await (await fetch(url)).json()
         },
 
-        getTestSet: () => async (testset) => {
-            const url = `${import.meta.env.VITE_BACKEND_URL}/testset?testset=${testset}&info=true`
+        getTestSet: () => async (token, testset) => {
+            const url = `${import.meta.env.VITE_BACKEND_URL}/testset?testset=${testset}&info=true&token=${token}`
             console.log('GET '+url)
             return await (await fetch(url)).json()
         },
 
-        sendTest: () => async (testset, testname, answer) => {
-            const url = `${import.meta.env.VITE_BACKEND_URL}/test?testset=${testset}&testname=${testname}&answer=${answer}`
+        sendTest: () => async (token, testset, testname, answer) => {
+            const url = `${import.meta.env.VITE_BACKEND_URL}/test?testset=${testset}&testname=${testname}&answer=${answer}&token=${token}`
             console.log('POST: '+url)
             return await (await fetch(url,{method:"POST"})).json()
         }
     },
-    mutations: {},
+    mutations: {
+        registerClient(state, formData) {
+            async function register(){
+                const url = `${import.meta.env.VITE_BACKEND_URL}/register`
+                console.log('POST: ' + url)
+                state.token = (await (await fetch(url, {
+                        method: "POST",
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({formdata: formData})
+                    })
+                ).json()).token
+            }
+            register()
+        }
+    },
     actions: {},
     modules: {},
 });
