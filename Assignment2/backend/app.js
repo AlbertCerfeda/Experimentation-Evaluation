@@ -1,7 +1,7 @@
 // require framework and middleware dependencies
 const express = require('express');
 var cors = require('cors')
-
+let model = require("./model/mongo.js")
 const logger = require('morgan');
 const methodOverride = require('method-override')
 

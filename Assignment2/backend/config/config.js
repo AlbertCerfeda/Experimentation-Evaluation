@@ -30,8 +30,18 @@ const settings = {
                 max: 1000,
                 message: "This IP is sending too many requests, slow down."
             })
-        }
+        },
     },
+    mongodb: {
+        mongodb_uri: `mongodb://${process.env.MONGODB_URI || 'localhost:27017'}`,
+        db_name: "Experimentation2",
+        collections: ["users","testsets"]
+    },
+
+    users: {
+        purge_incomplete_after_m: 10,   // Delete users who haven't completed all the tests sets under X minutes
+        check_purge_m: 1                // How often to check for purgeable users
+    }
 }
 
 // Deep freezes the settings object.

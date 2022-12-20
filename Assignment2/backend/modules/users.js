@@ -1,35 +1,58 @@
-const { v4: uuidv4 } = require('uuid');
 const tests = require('./tests')
-const _ = require('lodash')
+const model = require('../model/mongo.js')
+const config = require("../config/config")
+const {ObjectID} = require("mongodb");
 
-const users = {}
-
-function addUser(token, obj) {
-    users[token] = obj
-    console.log("Users: ", users)
-    return {token,user: _.cloneDeep(users[token])}
-}
-function getUser(token) {
-    if (users[token]===undefined)
-        return
-    console.log("Users: ", users)
-    return _.cloneDeep(users[token])
+async function purgeUsers() {
+    let IDdelete = []
+    await model.users.find({
+        signup: {'$lt':new Date(Date.now() - config.users.purge_incomplete_after_m*60 * 1000)},
+    }).forEach((doc)=>{
+        // If the user did not complete all the tests
+        if(Object.keys(doc.stats).some((testset)=>doc.stats[testset].tests.some((test)=>!test.completed)))
+            IDdelete.push(doc._id)
+    })
+    console.log(`[+] Purged ${(await model.users.deleteMany({_id: {'$in':IDdelete}})).deletedCount} users`)
 }
 
-function deleteUser(token) {
-    delete users[token]
+setTimeout(()=>{
+    async function purgeLoop() {
+        await purgeUsers()
+        setTimeout(purgeLoop,config.users.check_purge_m*60*1000)
+    }
+    // purgeLoop()
+},1000)
+
+
+
+
+async function addUser(obj) {
+    let newuser = await model.users.insertOne(obj)
+    return {token:newuser.insertedId.toHexString()}
 }
-function isValidUser(token) {
-    return token !== undefined && users[token] !== undefined
+async function updateUser(obj) {
+    let newuser = await model.users.findOneAndReplace({_id: new ObjectID(obj._id)},obj)
+    return {token:newuser.value._id.toHexString()}
 }
-function hasUserAccess(token, testset, testname) {
+async function getUser(objectid) {
+    let user = await model.users.findOne({_id: new ObjectID(objectid)})
+    return user
+}
+
+async function deleteUser(objectid) {
+    await model.users.findOneAndDelete({_id: new ObjectID(objectid)})
+}
+async function isValidUser(objectid) {
+    return objectid !== undefined && await model.users.findOne({_id: new ObjectID(objectid)})
+}
+async function hasUserAccess(token, testset, testname) {
     return true
 }
 
 
 
 
-function createUser(form) {
+async function createUser(form) {
     const required = {}
     let keys = Object.keys(form)
     let diff = Object.keys(required).filter(k=>!keys.includes(k))
@@ -42,8 +65,18 @@ function createUser(form) {
     let newuser = {
         signup: new Date(),
         data: form,
-        stats: tests.getAllTestSets()
+        stats: {}
     }
+    let testsets = await tests.getAllTestSets()
+    testsets.forEach((testset)=> {
+        console.log(testset)
+        newuser.stats[testset.testset] = {
+            tests: testset.tests
+        }
+    })
+
+
+    console.log(newuser)
 
     Object.keys(newuser.stats).forEach((testset)=>{
         newuser.stats[testset].tests = newuser.stats[testset].tests.map((test)=>{
@@ -54,28 +87,30 @@ function createUser(form) {
         })
     })
 
-    return addUser(uuidv4(), newuser)
+    return addUser(newuser)
 }
 
 
 
 
-function startAttempt(token, testset, testname) {
-    let user = getUser(token)
+async function startAttempt(token, testset, testname) {
+    let user = await getUser(token)
+    console.log(user)
     let test = user.stats[testset].tests.find((t)=>t.testname === testname)
 
     test.start = new Date()
-    addUser(token, user)
+    await updateUser(user)
 }
-function endAttempt(token, testset, testname, answer) {
-    let user = getUser(token)
-    let test = user.stats[testset].tests.find((t)=>t.testname === testname)
+async function endAttempt(token, testset, testname, answer) {
+    let user = await getUser(token)
+    let test = user.stats[testset].tests.find((t) => t.testname === testname)
 
     test.end = new Date()
     test.elapsed = test.end - test.start
-    test.correct = tests.isAnswerCorrect(testset, testname, answer)
+    test.correct = await tests.isAnswerCorrect(testset, testname, answer)
+    test.completed = true
     console.log(user.stats[testset])
-    addUser(token, user)
+    await updateUser(user)
     return {
         elapsed: test.elapsed,
         correct: test.correct

@@ -1,20 +1,25 @@
 const fs = require('fs')
-const _ = require('lodash');
+const model = require("../model/mongo")
 
-const testsets = JSON.parse(fs.readFileSync("./model/testsets.json"))
-console.log(testsets)
 
-function getTest(testset, testname, dto=true) {
-    let test = _.cloneDeep(getTestSet(testset).tests.find((t) => t.testname === testname))
-    if(dto)
+
+async function getTest(testset, testname, dto = true) {
+    let test = (await getTestSet(testset)).tests.find((t) => t.testname === testname)
+    if (dto)
         delete test.correct
     return test
 }
-function getTestSet(testset) {
-    return _.cloneDeep(testsets[testset])
+async function getTestSet(testset) {
+    return await model.testsets.findOne({testset: testset})
 }
-function getAllTestSets() {
-    return _.cloneDeep(testsets)
+async function getAllTestSets() {
+    return await model.testsets.find({}).toArray()
+}
+async function isValidTestSet(testset) {
+    return await getTestSet(testset) !== undefined
+}
+async function isValidTest(testset, testname) {
+    return await isValidTestSet(testset) && (await getTestSet(testset)).tests.find((t) => t.testname === testname) !== undefined
 }
 
 
@@ -27,29 +32,19 @@ function stripSensiviteTestInfo(obj) {
         options: obj.options.map(()=>{return{}})
     }
 }
-function getTestSetInfo(testset) {
-    let tests = getTestSet(testset)
-    tests.tests = tests.tests.map((t)=>stripSensiviteTestInfo(t))
+async function getTestSetInfo(testset) {
+    let tests = await getTestSet(testset)
+    tests.tests = tests.tests.map((t) => stripSensiviteTestInfo(t))
     return tests
 }
 
-function getTestInfo(testset, testname) {
-    return stripSensiviteTestInfo(getTest(testset,testname))
+async function getTestInfo(testset, testname) {
+    return stripSensiviteTestInfo(await getTest(testset, testname))
 }
 
-function isAnswerCorrect(testset, testname, answer) {
-    return getTest(testset, testname,false).correct == answer
+async function isAnswerCorrect(testset, testname, answer) {
+    return await getTest(testset, testname, false).correct == answer
 }
-
-function isValidTestSet(testset) {
-    return testsets[testset] !== undefined
-}
-function isValidTest(testset, testname) {
-    return isValidTestSet(testset) && testsets[testset].tests.find((t) => t.testname === testname) !== undefined
-}
-
-
-
 
 
 module.exports = {

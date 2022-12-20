@@ -10,26 +10,31 @@ const config = require("../config/config")
 const testsets = require("../modules/tests")
 const users =require("../modules/users")
 
-function ensureValidToken(req,res,next) {
+async function ensureValidToken(req, res, next) {
+    console.log("Ensuring valid token")
     const {token} = req.query
-    if(!users.isValidUser(token)) {
+    if (!await users.isValidUser(token)) {
         res.status(400).end()
         return
     }
     next()
 }
-function ensureValidTestset(req,res,next) {
+async function ensureValidTestset(req, res, next) {
+    console.log("Ensuring valid testset")
+
     const {testset} = req.query
-    if(!testsets.isValidTestSet(testset)) {
+    if (!await testsets.isValidTestSet(testset)) {
         res.status(400).end()
         return
     }
     next()
 }
 
-function ensureValidTest(req,res,next) {
+async function ensureValidTest(req, res, next) {
+    console.log("Ensuring valid test")
+
     const {testset, testname} = req.query
-    if(!testsets.isValidTest(testset, testname)) {
+    if (!await testsets.isValidTest(testset, testname)) {
         res.status(400).end()
         return
     }
@@ -37,65 +42,65 @@ function ensureValidTest(req,res,next) {
 }
 
 
-router.get('/test', ensureValidTest, function(req, res) {
+router.get('/test', ensureValidTest, async function (req, res) {
     console.log(req.query)
     const {testset, testname, token} = req.query
 
-    if(!req.query.info && !users.hasUserAccess(testset, testname)) {
+    if (!req.query.info && !await users.hasUserAccess(token, testset, testname)) {
         res.status(400).end()
         return
     }
 
-    if(req.query.info) {
-        res.json(testsets.getTestInfo(testset, testname))
+    if (req.query.info) {
+        res.json(await testsets.getTestInfo(testset, testname))
     } else {
-        users.startAttempt(token, testset, testname)
-        res.json(testsets.getTest(testset, testname))
+        await users.startAttempt(token, testset, testname)
+        res.json(await testsets.getTest(testset, testname))
     }
 
 })
 
-router.get('/testset', ensureValidTestset, function(req, res) {
+router.get('/testset', ensureValidTestset, async function (req, res) {
     console.log(req.query)
     const {testset} = req.query
 
 
-    if(req.query.info) {
-        res.json(testsets.getTestSetInfo(testset))
+    if (req.query.info) {
+        res.json(await testsets.getTestSetInfo(testset))
     } else {
-        res.json(testsets.getTestSetInfo(testset))
+        res.json(await testsets.getTestSetInfo(testset))
     }
 })
 
 
-router.post('/test', ensureValidTest, ensureValidToken, function(req, res) {
+router.post('/test', ensureValidTest, ensureValidToken, async function (req, res) {
     console.log(req.query)
     const {token, testset, testname, answer} = req.query
 
-    if(answer === undefined) {
+    if (answer === undefined) {
         res.status(400).end()
         return
     }
-    if(!users.hasUserAccess(token, testset, testname)) {
+    if (!await users.hasUserAccess(token, testset, testname)) {
         res.status(400).end()
         return
     }
 
-    res.json(users.endAttempt(token, testset, testname,answer))
+    res.json(await users.endAttempt(token, testset, testname, answer))
 })
 
 
-router.post('/register',function(req, res) {
+router.post('/register',async function (req, res) {
     const {formdata} = req.body
     console.log("Body: ", formdata)
 
-    if(formdata === undefined) {
+    if (formdata === undefined) {
         res.status(400).end()
         return
     }
-    let newuser = users.createUser(formdata)
+    let newuser = await users.createUser(formdata)
 
-    res.json({token:newuser.token})
+    res.json({token: newuser.token})
 })
 
 module.exports = router;

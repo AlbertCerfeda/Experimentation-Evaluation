@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "nodemon server.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "init": "node devscripts/initmongo.js"
   },
   "engines": {
     "node": "19.2.0"
@@ -17,8 +18,8 @@
     "express-rate-limit": "^6.7.0",
     "express-set-domain": "^1.0.3",
     "express-xss-sanitizer": "^1.1.6",
-    "lodash": "^4.17.21",
     "method-override": "^3.0.0",
+    "mongodb": "^4.13.0",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.20",
     "uuid": "^9.0.0"
