@@ -16,12 +16,6 @@
                     required
                 ></v-text-field>
                 <v-text-field
-                    v-model="email"
-                    :rules="emailRules"
-                    label="E-mail"
-
-                ></v-text-field>
-                <v-text-field
                     v-model="age"
                     :rules="ageRules"
                     label="Age"
@@ -131,13 +125,7 @@ export default defineComponent({
         valid: true,
         name: "",
         nameRules: [
-            (v) => !!v || "Name is required",
-            (v) => (v && v.length <= 15) || "Name must be less than 15 characters",
-        ],
-        email: "",
-        emailRules: [
-            (v) => !!v || "E-mail is required",
-            (v) => /.+@.+\..+/.test(v) || "E-mail must be valid",
+            (v) => !!v || "Name is required"
         ],
         age: "",
         ageRules: [
@@ -200,7 +188,7 @@ export default defineComponent({
         },
         async submit() {
           console.log(await this.$refs.form.validate())
-          if ((await this.$refs.form.validate()).valid) {
+          if (true || (await this.$refs.form.validate()).valid) {
             console.log("Validation Success")
             this.select_IDE();
             this.concatOtherLanguage();
