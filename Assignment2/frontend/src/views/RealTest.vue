@@ -1,7 +1,7 @@
 <template>
   <v-container fluid class="h-100 pa-0 bg-white text-red d-flex justify-center align-center flex-column">
       <TestSet ref="testset" testset="realtest"
-               :modal_onsubmit="endDemo"/>
+               :modal_onsubmit="endExperiment"/>
   </v-container>
 </template>
 
@@ -29,8 +29,9 @@ export default defineComponent({
 
   methods: {
 
-    endDemo() {
-      router.push({path:'/'})
+    async endExperiment() {
+      await this.$store.commit('logoutClient')
+      await router.push({path: '/'})
       router.forward()
     }
   }

@@ -1,5 +1,4 @@
 import {createStore} from "vuex";
-import {store} from "core-js/internals/reflect-metadata";
 
 export default createStore({
     state () {
@@ -56,6 +55,11 @@ export default createStore({
                     body: JSON.stringify({formdata: formData})
                 })
             ).json()).token
+        },
+
+        async logoutClient(state) {
+            console.log("Logging out user")
+            state.token = undefined
         }
     },
     actions: {},

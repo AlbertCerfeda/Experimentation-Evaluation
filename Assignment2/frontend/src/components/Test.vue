@@ -16,7 +16,7 @@
             color="red-accent-2"
         >
           <v-btn v-if="show_timer" class="text-h6"  variant="tonal">{{this.stopWatch.timer}}</v-btn>
-          <v-btn v-else variant="tonal">Start countdown</v-btn>
+          <v-btn v-else variant="outlined"><b>START TEST</b></v-btn>
 
         </v-progress-linear>
           <v-btn @click="this.oncomplete" variant="outlined" class="mt-3" :style="`opacity: ${this.test_results.correct!==undefined?'1':'0'}`">
@@ -102,6 +102,9 @@ export default defineComponent({
         },
         timer: '00:00.000',
         formatDate: (date) => {
+          if(typeof date === 'number') {
+            date = new Date(date)
+          }
           let min = date.getUTCMinutes()
               , sec = date.getUTCSeconds()
               , ms = date.getUTCMilliseconds();

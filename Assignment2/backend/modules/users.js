@@ -21,7 +21,7 @@ setTimeout(() => {
         setTimeout(purgeLoop, config.users.check_purge_m * 60 * 1000)
     }
 
-    // purgeLoop()
+    purgeLoop()
 }, 1000)
 
 
