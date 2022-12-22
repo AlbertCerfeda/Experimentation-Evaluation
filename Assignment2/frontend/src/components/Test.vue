@@ -5,7 +5,7 @@
         <h2 class="text-h5"> You are about to perform test</h2>
         <h1 class="text-h4 ma-2 mb-5 font-weight-bold">{{ test.testname }}</h1>
           <h2 class="text-h5">The word is:</h2>
-          <h1 class="text-h4 ma-2 mb-5 font-weight-bold">{{ test.word!==undefined?test.word:'-' }}</h1>
+          <h1 class="text-h4 ma-2 mb-5 font-weight-bold">{{ is_countingdown || is_test_running || Object.keys(test_results).length > 0 ? test.word:'-' }}</h1>
 
 
         <v-progress-linear

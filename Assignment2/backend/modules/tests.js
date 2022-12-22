@@ -29,6 +29,7 @@ async function isValidTest(testset, testname) {
 function stripSensiviteTestInfo(obj) {
     return {
         testname: obj.testname,
+        word: obj.word,
         options: obj.options.map(()=>{return{}})
     }
 }

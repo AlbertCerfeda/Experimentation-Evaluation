@@ -56,7 +56,6 @@ async function hasUserAccess(token, testset, testname) {
 async function createUser(form) {
     const required = [
         'name',
-        'email',
         'age',
         'gender',
         'programmer',
