@@ -22,7 +22,7 @@ setTimeout(() => {
     }
 
     purgeLoop()
-}, 1000)
+}, 10000)
 
 
 async function addUser(obj) {

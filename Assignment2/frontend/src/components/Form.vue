@@ -91,16 +91,6 @@
                     ></v-text-field>
                         
                 </section>
-                <!-- checkbox agreement -->
-                <v-checkbox
-                    v-model="checkboxA"
-                    :rules="agreementRules"
-                    label="I agree to the terms and conditions"
-                    required
-                ></v-checkbox>
-                <!-- <section v-if="checkboxA">
-                    <v-btn color="primary" @click="submit">Submit</v-btn>
-                </section> -->
                 </v-form>
                 </v-card-text>
             </v-card>
@@ -135,9 +125,6 @@ export default defineComponent({
             (v) => (v && v >= 18) || "You must be at least 18 years old to continue",
         ],
         checkboxP: false,
-
-        checkboxA: false,
-        agreementRules: [(v) => !!v || 'You must agree to continue'],
 
         genders: ["Female", "Male", "Other"],
 
