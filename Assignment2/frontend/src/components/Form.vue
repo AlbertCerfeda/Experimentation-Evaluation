@@ -126,7 +126,7 @@ export default defineComponent({
         ],
         checkboxP: false,
 
-        genders: ["Female", "Male", "Other"],
+        genders: ["Female", "Male"],
 
         programmingLanguages: [
             { id: 1, name: "Java", selected: false },
