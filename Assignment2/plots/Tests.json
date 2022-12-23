@@ -1,0 +1,3596 @@
+[{
+  "_id": {
+    "$oid": "63a30db99951f5d4f43148e6"
+  },
+  "signup": {
+    "$date": {
+      "$numberLong": "1671630265630"
+    }
+  },
+  "data": {
+    "name": "Catarina Morais",
+    "email": "catarina.morais@usi.ch",
+    "age": "24",
+    "gender": "Female",
+    "programmer": true,
+    "programmingLanguages": [
+      {
+        "id": 1,
+        "name": "Java",
+        "selected": true
+      },
+      {
+        "id": 2,
+        "name": "JavaScript",
+        "selected": true
+      },
+      {
+        "id": 3,
+        "name": "Python",
+        "selected": true
+      },
+      {
+        "id": 4,
+        "name": "C++",
+        "selected": true
+      },
+      {
+        "id": 6,
+        "name": "C",
+        "selected": true
+      },
+      {
+        "id": 7,
+        "name": "Julia",
+        "selected": true
+      }
+    ]
+  },
+  "stats": {
+    "init": {
+      "tests": [
+        {
+          "testname": "1.1",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671630275524"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671630281324"
+            }
+          },
+          "elapsed": 5800,
+          "correct": true
+        },
+        {
+          "testname": "1.2",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671630287550"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671630291476"
+            }
+          },
+          "elapsed": 3926,
+          "correct": true
+        }
+      ]
+    },
+    "realtest": {
+      "tests": [
+        {
+          "testname": "2.1",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671630302798"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671630309292"
+            }
+          },
+          "elapsed": 6494,
+          "correct": true
+        },
+        {
+          "testname": "2.2",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671630314447"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671630329355"
+            }
+          },
+          "elapsed": 14908,
+          "correct": false
+        },
+        {
+          "testname": "2.3",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671630333616"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671630338438"
+            }
+          },
+          "elapsed": 4822,
+          "correct": true
+        },
+        {
+          "testname": "2.4",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671630342464"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671630344407"
+            }
+          },
+          "elapsed": 1943,
+          "correct": true
+        },
+        {
+          "testname": "2.5",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671630348080"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671630351724"
+            }
+          },
+          "elapsed": 3644,
+          "correct": true
+        },
+        {
+          "testname": "2.6",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671630356239"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671630360912"
+            }
+          },
+          "elapsed": 4673,
+          "correct": true
+        },
+        {
+          "testname": "2.7",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671630364530"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671630368333"
+            }
+          },
+          "elapsed": 3803,
+          "correct": true
+        },
+        {
+          "testname": "2.8",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671630374317"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671630377183"
+            }
+          },
+          "elapsed": 2866,
+          "correct": true
+        },
+        {
+          "testname": "2.9",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671630380920"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671630383643"
+            }
+          },
+          "elapsed": 2723,
+          "correct": true
+        },
+        {
+          "testname": "2.10",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671630387317"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671630390134"
+            }
+          },
+          "elapsed": 2817,
+          "correct": false
+        },
+        {
+          "testname": "2.11",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671630395491"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671630406714"
+            }
+          },
+          "elapsed": 11223,
+          "correct": true
+        },
+        {
+          "testname": "2.12",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671630411854"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671630414178"
+            }
+          },
+          "elapsed": 2324,
+          "correct": true
+        },
+        {
+          "testname": "2.13",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671630417828"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671630419714"
+            }
+          },
+          "elapsed": 1886,
+          "correct": true
+        },
+        {
+          "testname": "2.14",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671630423332"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671630426280"
+            }
+          },
+          "elapsed": 2948,
+          "correct": true
+        }
+      ]
+    }
+  }
+},{
+  "_id": {
+    "$oid": "63a3278a9951f5d4f43148eb"
+  },
+  "signup": {
+    "$date": {
+      "$numberLong": "1671636874326"
+    }
+  },
+  "data": {
+    "name": "Gabriele Bavota",
+    "email": "gabriele.bavota@usi.ch",
+    "age": "37",
+    "gender": "Male",
+    "programmer": true,
+    "programmingLanguages": [
+      {
+        "id": 1,
+        "name": "Java",
+        "selected": true
+      },
+      {
+        "id": 3,
+        "name": "Python",
+        "selected": true
+      }
+    ]
+  },
+  "stats": {
+    "init": {
+      "tests": [
+        {
+          "testname": "1.1",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671636886694"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671636890466"
+            }
+          },
+          "elapsed": 3772,
+          "correct": true
+        },
+        {
+          "testname": "1.2",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671636894839"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671636897306"
+            }
+          },
+          "elapsed": 2467,
+          "correct": true
+        }
+      ]
+    },
+    "realtest": {
+      "tests": [
+        {
+          "testname": "2.1",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671636907339"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671636912367"
+            }
+          },
+          "elapsed": 5028,
+          "correct": true
+        },
+        {
+          "testname": "2.2",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671636916715"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671636921262"
+            }
+          },
+          "elapsed": 4547,
+          "correct": true
+        },
+        {
+          "testname": "2.3",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671636924867"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671636929340"
+            }
+          },
+          "elapsed": 4473,
+          "correct": true
+        },
+        {
+          "testname": "2.4",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671636933213"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671636934593"
+            }
+          },
+          "elapsed": 1380,
+          "correct": true
+        },
+        {
+          "testname": "2.5",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671636939476"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671636941926"
+            }
+          },
+          "elapsed": 2450,
+          "correct": true
+        },
+        {
+          "testname": "2.6",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671636945841"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671636951824"
+            }
+          },
+          "elapsed": 5983,
+          "correct": true
+        },
+        {
+          "testname": "2.7",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671636955175"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671636959919"
+            }
+          },
+          "elapsed": 4744,
+          "correct": true
+        },
+        {
+          "testname": "2.8",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671636963167"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671636966430"
+            }
+          },
+          "elapsed": 3263,
+          "correct": true
+        },
+        {
+          "testname": "2.9",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671636969729"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671636973595"
+            }
+          },
+          "elapsed": 3866,
+          "correct": true
+        },
+        {
+          "testname": "2.10",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671636976995"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671636979955"
+            }
+          },
+          "elapsed": 2960,
+          "correct": true
+        },
+        {
+          "testname": "2.11",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671636983415"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671636986783"
+            }
+          },
+          "elapsed": 3368,
+          "correct": false
+        },
+        {
+          "testname": "2.12",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671636992431"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671636997017"
+            }
+          },
+          "elapsed": 4586,
+          "correct": true
+        },
+        {
+          "testname": "2.13",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671637000261"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671637002601"
+            }
+          },
+          "elapsed": 2340,
+          "correct": true
+        },
+        {
+          "testname": "2.14",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671637006088"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671637008960"
+            }
+          },
+          "elapsed": 2872,
+          "correct": true
+        }
+      ]
+    }
+  }
+},{
+  "_id": {
+    "$oid": "63a32bd49951f5d4f43148ed"
+  },
+  "signup": {
+    "$date": {
+      "$numberLong": "1671637972418"
+    }
+  },
+  "data": {
+    "name": "Leonardo Alchieri",
+    "email": "leonardo.alchieri@usi.ch",
+    "age": "25",
+    "gender": "Male",
+    "programmer": true,
+    "programmingLanguages": [
+      {
+        "id": 1,
+        "name": "Java",
+        "selected": true
+      },
+      {
+        "id": 3,
+        "name": "Python",
+        "selected": true
+      },
+      {
+        "id": 4,
+        "name": "C++",
+        "selected": true
+      }
+    ]
+  },
+  "stats": {
+    "init": {
+      "tests": [
+        {
+          "testname": "1.1",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671637975580"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671637977004"
+            }
+          },
+          "elapsed": 1424,
+          "correct": true
+        },
+        {
+          "testname": "1.2",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671637982602"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671637985937"
+            }
+          },
+          "elapsed": 3335,
+          "correct": false
+        }
+      ]
+    },
+    "realtest": {
+      "tests": [
+        {
+          "testname": "2.1",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671637992353"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671637997034"
+            }
+          },
+          "elapsed": 4681,
+          "correct": true
+        },
+        {
+          "testname": "2.2",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671638053672"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671638060484"
+            }
+          },
+          "elapsed": 6812,
+          "correct": false
+        },
+        {
+          "testname": "2.3",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671638072807"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671638077394"
+            }
+          },
+          "elapsed": 4587,
+          "correct": true
+        },
+        {
+          "testname": "2.4",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671638080593"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671638082663"
+            }
+          },
+          "elapsed": 2070,
+          "correct": true
+        },
+        {
+          "testname": "2.5",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671638086369"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671638088120"
+            }
+          },
+          "elapsed": 1751,
+          "correct": false
+        },
+        {
+          "testname": "2.6",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671638093318"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671638095831"
+            }
+          },
+          "elapsed": 2513,
+          "correct": true
+        },
+        {
+          "testname": "2.7",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671638099265"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671638103244"
+            }
+          },
+          "elapsed": 3979,
+          "correct": true
+        },
+        {
+          "testname": "2.8",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671638107527"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671638110898"
+            }
+          },
+          "elapsed": 3371,
+          "correct": true
+        },
+        {
+          "testname": "2.9",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671638114292"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671638116038"
+            }
+          },
+          "elapsed": 1746,
+          "correct": false
+        },
+        {
+          "testname": "2.10",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671638119831"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671638122300"
+            }
+          },
+          "elapsed": 2469,
+          "correct": false
+        },
+        {
+          "testname": "2.11",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671638126706"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671638131410"
+            }
+          },
+          "elapsed": 4704,
+          "correct": true
+        },
+        {
+          "testname": "2.12",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671638135050"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671638138216"
+            }
+          },
+          "elapsed": 3166,
+          "correct": true
+        },
+        {
+          "testname": "2.13",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671638142016"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671638144536"
+            }
+          },
+          "elapsed": 2520,
+          "correct": true
+        },
+        {
+          "testname": "2.14",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671638148059"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671638150948"
+            }
+          },
+          "elapsed": 2889,
+          "correct": false
+        }
+      ]
+    }
+  }
+},{
+  "_id": {
+    "$oid": "63a1f790128327bdc6d580b4"
+  },
+  "signup": {
+    "$date": {
+      "$numberLong": "1671559056169"
+    }
+  },
+  "data": {
+    "name": "Diell",
+    "email": "diell.kryeziu@usi.ch",
+    "age": "21",
+    "gender": "Male",
+    "programmer": true,
+    "programmingLanguages": [
+      {
+        "id": 1,
+        "name": "Java",
+        "selected": true
+      },
+      {
+        "id": 2,
+        "name": "JavaScript",
+        "selected": true
+      },
+      {
+        "id": 3,
+        "name": "Python",
+        "selected": true
+      },
+      {
+        "id": 4,
+        "name": "C++",
+        "selected": true
+      },
+      {
+        "id": 6,
+        "name": "C",
+        "selected": true
+      }
+    ]
+  },
+  "stats": {
+    "init": {
+      "tests": [
+        {
+          "testname": "1.1",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671559107724"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671559109907"
+            }
+          },
+          "elapsed": 2183,
+          "correct": true
+        },
+        {
+          "testname": "1.2",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671559115677"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671559119358"
+            }
+          },
+          "elapsed": 3681,
+          "correct": true
+        }
+      ]
+    },
+    "realtest": {
+      "tests": [
+        {
+          "testname": "2.1",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671559142261"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671559144270"
+            }
+          },
+          "elapsed": 2009,
+          "correct": true
+        },
+        {
+          "testname": "2.2",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671559149748"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671559152947"
+            }
+          },
+          "elapsed": 3199,
+          "correct": false
+        },
+        {
+          "testname": "2.3",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671559165317"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671559168358"
+            }
+          },
+          "elapsed": 3041,
+          "correct": true
+        },
+        {
+          "testname": "2.4",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671559173428"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671559175428"
+            }
+          },
+          "elapsed": 2000,
+          "correct": true
+        },
+        {
+          "testname": "2.5",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671559178938"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671559180719"
+            }
+          },
+          "elapsed": 1781,
+          "correct": true
+        },
+        {
+          "testname": "2.6",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671559186278"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671559188329"
+            }
+          },
+          "elapsed": 2051,
+          "correct": false
+        },
+        {
+          "testname": "2.7",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671559196412"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671559199478"
+            }
+          },
+          "elapsed": 3066,
+          "correct": true
+        },
+        {
+          "testname": "2.8",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671559204861"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671559207636"
+            }
+          },
+          "elapsed": 2775,
+          "correct": true
+        },
+        {
+          "testname": "2.9",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671559211980"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671559215195"
+            }
+          },
+          "elapsed": 3215,
+          "correct": true
+        },
+        {
+          "testname": "2.10",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671559219437"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671559221531"
+            }
+          },
+          "elapsed": 2094,
+          "correct": true
+        },
+        {
+          "testname": "2.11",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671559225667"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671559230322"
+            }
+          },
+          "elapsed": 4655,
+          "correct": true
+        },
+        {
+          "testname": "2.12",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671559240856"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671559243666"
+            }
+          },
+          "elapsed": 2810,
+          "correct": true
+        },
+        {
+          "testname": "2.13",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671559247917"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671559249639"
+            }
+          },
+          "elapsed": 1722,
+          "correct": true
+        },
+        {
+          "testname": "2.14",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671559254190"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671559255727"
+            }
+          },
+          "elapsed": 1537,
+          "correct": true
+        }
+      ]
+    }
+  }
+},{
+  "_id": {
+    "$oid": "63a1f9a5128327bdc6d580b6"
+  },
+  "signup": {
+    "$date": {
+      "$numberLong": "1671559589858"
+    }
+  },
+  "data": {
+    "name": "Andrea",
+    "email": "gualaa@usi.ch",
+    "age": "23",
+    "gender": "Male",
+    "programmer": true,
+    "programmingLanguages": [
+      {
+        "id": 1,
+        "name": "Java",
+        "selected": true
+      },
+      {
+        "id": 2,
+        "name": "JavaScript",
+        "selected": true
+      },
+      {
+        "id": 3,
+        "name": "Python",
+        "selected": true
+      },
+      {
+        "id": 4,
+        "name": "C++",
+        "selected": true
+      },
+      {
+        "id": 5,
+        "name": "C#",
+        "selected": true
+      },
+      {
+        "id": 6,
+        "name": "C",
+        "selected": true
+      }
+    ]
+  },
+  "stats": {
+    "init": {
+      "tests": [
+        {
+          "testname": "1.1",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671559594618"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671559599621"
+            }
+          },
+          "elapsed": 5003,
+          "correct": true
+        },
+        {
+          "testname": "1.2",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671559629180"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671559632050"
+            }
+          },
+          "elapsed": 2870,
+          "correct": true
+        }
+      ]
+    },
+    "realtest": {
+      "tests": [
+        {
+          "testname": "2.1",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671559644103"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671559648044"
+            }
+          },
+          "elapsed": 3941,
+          "correct": false
+        },
+        {
+          "testname": "2.2",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671559653758"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671559658012"
+            }
+          },
+          "elapsed": 4254,
+          "correct": false
+        },
+        {
+          "testname": "2.3",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671559673085"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671559676502"
+            }
+          },
+          "elapsed": 3417,
+          "correct": true
+        },
+        {
+          "testname": "2.4",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671559681109"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671559683074"
+            }
+          },
+          "elapsed": 1965,
+          "correct": true
+        },
+        {
+          "testname": "2.5",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671559687149"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671559689921"
+            }
+          },
+          "elapsed": 2772,
+          "correct": true
+        },
+        {
+          "testname": "2.6",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671559694187"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671559698810"
+            }
+          },
+          "elapsed": 4623,
+          "correct": true
+        },
+        {
+          "testname": "2.7",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671559703380"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671559706379"
+            }
+          },
+          "elapsed": 2999,
+          "correct": true
+        },
+        {
+          "testname": "2.8",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671559711589"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671559714287"
+            }
+          },
+          "elapsed": 2698,
+          "correct": false
+        },
+        {
+          "testname": "2.9",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671559720509"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671559723708"
+            }
+          },
+          "elapsed": 3199,
+          "correct": true
+        },
+        {
+          "testname": "2.10",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671559728128"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671559730693"
+            }
+          },
+          "elapsed": 2565,
+          "correct": true
+        },
+        {
+          "testname": "2.11",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671559735163"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671559740657"
+            }
+          },
+          "elapsed": 5494,
+          "correct": true
+        },
+        {
+          "testname": "2.12",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671559744980"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671559749297"
+            }
+          },
+          "elapsed": 4317,
+          "correct": false
+        },
+        {
+          "testname": "2.13",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671559757067"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671559761587"
+            }
+          },
+          "elapsed": 4520,
+          "correct": true
+        },
+        {
+          "testname": "2.14",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671559768539"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671559774366"
+            }
+          },
+          "elapsed": 5827,
+          "correct": true
+        }
+      ]
+    }
+  }
+},{
+  "_id": {
+    "$oid": "63a5732794e8a233b3762cd7"
+  },
+  "signup": {
+    "$date": {
+      "$numberLong": "1671787303357"
+    }
+  },
+  "data": {
+    "name": "Alessandro Gobbetti",
+    "age": "21",
+    "gender": "Male",
+    "programmer": true,
+    "programmingLanguages": [
+      {
+        "id": 1,
+        "name": "Java",
+        "selected": true
+      },
+      {
+        "id": 2,
+        "name": "JavaScript",
+        "selected": true
+      },
+      {
+        "id": 3,
+        "name": "Python",
+        "selected": true
+      },
+      {
+        "id": 4,
+        "name": "C++",
+        "selected": true
+      },
+      {
+        "id": 6,
+        "name": "C",
+        "selected": true
+      }
+    ]
+  },
+  "stats": {
+    "init": {
+      "tests": [
+        {
+          "testname": "1.1",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787313079"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787318466"
+            }
+          },
+          "elapsed": 5387,
+          "correct": true
+        },
+        {
+          "testname": "1.2",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787328588"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787330907"
+            }
+          },
+          "elapsed": 2319,
+          "correct": true
+        }
+      ]
+    },
+    "realtest": {
+      "tests": [
+        {
+          "testname": "2.1",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787343284"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787345638"
+            }
+          },
+          "elapsed": 2354,
+          "correct": true
+        },
+        {
+          "testname": "2.2",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787351267"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787354643"
+            }
+          },
+          "elapsed": 3376,
+          "correct": false
+        },
+        {
+          "testname": "2.3",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787364706"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787369240"
+            }
+          },
+          "elapsed": 4534,
+          "correct": true
+        },
+        {
+          "testname": "2.4",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787378838"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787379938"
+            }
+          },
+          "elapsed": 1100,
+          "correct": true
+        },
+        {
+          "testname": "2.5",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787385307"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787387180"
+            }
+          },
+          "elapsed": 1873,
+          "correct": true
+        },
+        {
+          "testname": "2.6",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787399673"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787404383"
+            }
+          },
+          "elapsed": 4710,
+          "correct": true
+        },
+        {
+          "testname": "2.7",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787409027"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787412601"
+            }
+          },
+          "elapsed": 3574,
+          "correct": true
+        },
+        {
+          "testname": "2.8",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787417511"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787420514"
+            }
+          },
+          "elapsed": 3003,
+          "correct": true
+        },
+        {
+          "testname": "2.9",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787424523"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787429455"
+            }
+          },
+          "elapsed": 4932,
+          "correct": false
+        },
+        {
+          "testname": "2.10",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787434805"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787436648"
+            }
+          },
+          "elapsed": 1843,
+          "correct": true
+        },
+        {
+          "testname": "2.11",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787442125"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787447549"
+            }
+          },
+          "elapsed": 5424,
+          "correct": false
+        },
+        {
+          "testname": "2.12",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787454787"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787458705"
+            }
+          },
+          "elapsed": 3918,
+          "correct": true
+        },
+        {
+          "testname": "2.13",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787462649"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787464477"
+            }
+          },
+          "elapsed": 1828,
+          "correct": true
+        },
+        {
+          "testname": "2.14",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787469240"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787471202"
+            }
+          },
+          "elapsed": 1962,
+          "correct": true
+        }
+      ]
+    }
+  }
+},{
+  "_id": {
+    "$oid": "63a5747994e8a233b3762cd8"
+  },
+  "signup": {
+    "$date": {
+      "$numberLong": "1671787641415"
+    }
+  },
+  "data": {
+    "name": "Elisa",
+    "age": "42",
+    "gender": "Female",
+    "programmer": false,
+    "programmingLanguages": []
+  },
+  "stats": {
+    "init": {
+      "tests": [
+        {
+          "testname": "1.1",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787647281"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787652599"
+            }
+          },
+          "elapsed": 5318,
+          "correct": true
+        },
+        {
+          "testname": "1.2",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787659928"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787663239"
+            }
+          },
+          "elapsed": 3311,
+          "correct": true
+        }
+      ]
+    },
+    "realtest": {
+      "tests": [
+        {
+          "testname": "2.1",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787673363"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787675872"
+            }
+          },
+          "elapsed": 2509,
+          "correct": true
+        },
+        {
+          "testname": "2.2",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787681906"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787685990"
+            }
+          },
+          "elapsed": 4084,
+          "correct": true
+        },
+        {
+          "testname": "2.3",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787691371"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787695654"
+            }
+          },
+          "elapsed": 4283,
+          "correct": true
+        },
+        {
+          "testname": "2.4",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787700459"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787701559"
+            }
+          },
+          "elapsed": 1100,
+          "correct": true
+        },
+        {
+          "testname": "2.5",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787707999"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787709818"
+            }
+          },
+          "elapsed": 1819,
+          "correct": true
+        },
+        {
+          "testname": "2.6",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787715356"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787719256"
+            }
+          },
+          "elapsed": 3900,
+          "correct": true
+        },
+        {
+          "testname": "2.7",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787723531"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787726756"
+            }
+          },
+          "elapsed": 3225,
+          "correct": true
+        },
+        {
+          "testname": "2.8",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787732539"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787734230"
+            }
+          },
+          "elapsed": 1691,
+          "correct": true
+        },
+        {
+          "testname": "2.9",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787738471"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787741654"
+            }
+          },
+          "elapsed": 3183,
+          "correct": true
+        },
+        {
+          "testname": "2.10",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787745975"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787748458"
+            }
+          },
+          "elapsed": 2483,
+          "correct": true
+        },
+        {
+          "testname": "2.11",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787752921"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787755977"
+            }
+          },
+          "elapsed": 3056,
+          "correct": true
+        },
+        {
+          "testname": "2.12",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787759855"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787761189"
+            }
+          },
+          "elapsed": 1334,
+          "correct": true
+        },
+        {
+          "testname": "2.13",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787765060"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787767287"
+            }
+          },
+          "elapsed": 2227,
+          "correct": true
+        },
+        {
+          "testname": "2.14",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787771638"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787772849"
+            }
+          },
+          "elapsed": 1211,
+          "correct": true
+        }
+      ]
+    }
+  }
+},{
+  "_id": {
+    "$oid": "63a5756794e8a233b3762cd9"
+  },
+  "signup": {
+    "$date": {
+      "$numberLong": "1671787879840"
+    }
+  },
+  "data": {
+    "name": "Sabina",
+    "age": "32",
+    "gender": "Female",
+    "programmer": false,
+    "programmingLanguages": []
+  },
+  "stats": {
+    "init": {
+      "tests": [
+        {
+          "testname": "1.1",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787889497"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787893726"
+            }
+          },
+          "elapsed": 4229,
+          "correct": false
+        },
+        {
+          "testname": "1.2",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787914234"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787920682"
+            }
+          },
+          "elapsed": 6448,
+          "correct": true
+        }
+      ]
+    },
+    "realtest": {
+      "tests": [
+        {
+          "testname": "2.1",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787941200"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787944788"
+            }
+          },
+          "elapsed": 3588,
+          "correct": true
+        },
+        {
+          "testname": "2.2",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787950715"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787955611"
+            }
+          },
+          "elapsed": 4896,
+          "correct": false
+        },
+        {
+          "testname": "2.3",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787963886"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787967714"
+            }
+          },
+          "elapsed": 3828,
+          "correct": true
+        },
+        {
+          "testname": "2.4",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787972707"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787976718"
+            }
+          },
+          "elapsed": 4011,
+          "correct": true
+        },
+        {
+          "testname": "2.5",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787981427"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671787984482"
+            }
+          },
+          "elapsed": 3055,
+          "correct": true
+        },
+        {
+          "testname": "2.6",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671787989948"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671788001248"
+            }
+          },
+          "elapsed": 11300,
+          "correct": false
+        },
+        {
+          "testname": "2.7",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671788016376"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671788020575"
+            }
+          },
+          "elapsed": 4199,
+          "correct": true
+        },
+        {
+          "testname": "2.8",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671788026237"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671788033657"
+            }
+          },
+          "elapsed": 7420,
+          "correct": true
+        },
+        {
+          "testname": "2.9",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671788038155"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671788042288"
+            }
+          },
+          "elapsed": 4133,
+          "correct": true
+        },
+        {
+          "testname": "2.10",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671788048275"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671788053501"
+            }
+          },
+          "elapsed": 5226,
+          "correct": true
+        },
+        {
+          "testname": "2.11",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671788058351"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671788061206"
+            }
+          },
+          "elapsed": 2855,
+          "correct": true
+        },
+        {
+          "testname": "2.12",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671788066662"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671788070933"
+            }
+          },
+          "elapsed": 4271,
+          "correct": true
+        },
+        {
+          "testname": "2.13",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671788075310"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671788078551"
+            }
+          },
+          "elapsed": 3241,
+          "correct": true
+        },
+        {
+          "testname": "2.14",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671788082997"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671788085793"
+            }
+          },
+          "elapsed": 2796,
+          "correct": true
+        }
+      ]
+    }
+  }
+},{
+  "_id": {
+    "$oid": "63a576df94e8a233b3762cda"
+  },
+  "signup": {
+    "$date": {
+      "$numberLong": "1671788255736"
+    }
+  },
+  "data": {
+    "name": "Arianna",
+    "age": "33",
+    "gender": "Female",
+    "programmer": false,
+    "programmingLanguages": []
+  },
+  "stats": {
+    "init": {
+      "tests": [
+        {
+          "testname": "1.1",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671788267506"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671788282668"
+            }
+          },
+          "elapsed": 15162,
+          "correct": true
+        },
+        {
+          "testname": "1.2",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671788299937"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671788306064"
+            }
+          },
+          "elapsed": 6127,
+          "correct": true
+        }
+      ]
+    },
+    "realtest": {
+      "tests": [
+        {
+          "testname": "2.1",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671788327981"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671788332556"
+            }
+          },
+          "elapsed": 4575,
+          "correct": false
+        },
+        {
+          "testname": "2.2",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671788346703"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671788354947"
+            }
+          },
+          "elapsed": 8244,
+          "correct": false
+        },
+        {
+          "testname": "2.3",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671788373954"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671788378630"
+            }
+          },
+          "elapsed": 4676,
+          "correct": true
+        },
+        {
+          "testname": "2.4",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671788385679"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671788390477"
+            }
+          },
+          "elapsed": 4798,
+          "correct": true
+        },
+        {
+          "testname": "2.5",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671788398679"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671788403634"
+            }
+          },
+          "elapsed": 4955,
+          "correct": true
+        },
+        {
+          "testname": "2.6",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671788411239"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671788420756"
+            }
+          },
+          "elapsed": 9517,
+          "correct": true
+        },
+        {
+          "testname": "2.7",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671788428407"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671788434853"
+            }
+          },
+          "elapsed": 6446,
+          "correct": true
+        },
+        {
+          "testname": "2.8",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671788443198"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671788448161"
+            }
+          },
+          "elapsed": 4963,
+          "correct": false
+        },
+        {
+          "testname": "2.9",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671788458382"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671788463057"
+            }
+          },
+          "elapsed": 4675,
+          "correct": true
+        },
+        {
+          "testname": "2.10",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671788469004"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671788471910"
+            }
+          },
+          "elapsed": 2906,
+          "correct": true
+        },
+        {
+          "testname": "2.11",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671788477654"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671788481407"
+            }
+          },
+          "elapsed": 3753,
+          "correct": true
+        },
+        {
+          "testname": "2.12",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671788486800"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671788490429"
+            }
+          },
+          "elapsed": 3629,
+          "correct": true
+        },
+        {
+          "testname": "2.13",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671788494975"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671788497531"
+            }
+          },
+          "elapsed": 2556,
+          "correct": true
+        },
+        {
+          "testname": "2.14",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671788503008"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671788510032"
+            }
+          },
+          "elapsed": 7024,
+          "correct": false
+        }
+      ]
+    }
+  }
+},{
+  "_id": {
+    "$oid": "63a5799c94e8a233b3762cdc"
+  },
+  "signup": {
+    "$date": {
+      "$numberLong": "1671788956800"
+    }
+  },
+  "data": {
+    "name": "josh",
+    "age": "19",
+    "gender": "Male",
+    "programmer": true,
+    "programmingLanguages": [
+      {
+        "id": 1,
+        "name": "Java",
+        "selected": true
+      },
+      {
+        "id": 3,
+        "name": "Python",
+        "selected": true
+      },
+      {
+        "id": 5,
+        "name": "C#",
+        "selected": true
+      }
+    ]
+  },
+  "stats": {
+    "init": {
+      "tests": [
+        {
+          "testname": "1.1",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671789071133"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671789072576"
+            }
+          },
+          "elapsed": 1443,
+          "correct": true
+        },
+        {
+          "testname": "1.2",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671789079221"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671789079866"
+            }
+          },
+          "elapsed": 645,
+          "correct": true
+        }
+      ]
+    },
+    "realtest": {
+      "tests": [
+        {
+          "testname": "2.1",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671789096035"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671789096972"
+            }
+          },
+          "elapsed": 937,
+          "correct": true
+        },
+        {
+          "testname": "2.2",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671789102466"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671789103392"
+            }
+          },
+          "elapsed": 926,
+          "correct": false
+        },
+        {
+          "testname": "2.3",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671789115775"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671789116625"
+            }
+          },
+          "elapsed": 850,
+          "correct": false
+        },
+        {
+          "testname": "2.4",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671789134303"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671789138751"
+            }
+          },
+          "elapsed": 4448,
+          "correct": true
+        },
+        {
+          "testname": "2.5",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671789143339"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671789144605"
+            }
+          },
+          "elapsed": 1266,
+          "correct": true
+        },
+        {
+          "testname": "2.6",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671789149152"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671789150634"
+            }
+          },
+          "elapsed": 1482,
+          "correct": false
+        },
+        {
+          "testname": "2.7",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671789156980"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671789159218"
+            }
+          },
+          "elapsed": 2238,
+          "correct": false
+        },
+        {
+          "testname": "2.8",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671789200689"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671789204405"
+            }
+          },
+          "elapsed": 3716,
+          "correct": false
+        },
+        {
+          "testname": "2.9",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671789211885"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671789214466"
+            }
+          },
+          "elapsed": 2581,
+          "correct": true
+        },
+        {
+          "testname": "2.10",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671789219022"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671789222455"
+            }
+          },
+          "elapsed": 3433,
+          "correct": true
+        },
+        {
+          "testname": "2.11",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671789227002"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671789230570"
+            }
+          },
+          "elapsed": 3568,
+          "correct": false
+        },
+        {
+          "testname": "2.12",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671789236788"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671789242741"
+            }
+          },
+          "elapsed": 5953,
+          "correct": true
+        },
+        {
+          "testname": "2.13",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671789251986"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671789254380"
+            }
+          },
+          "elapsed": 2394,
+          "correct": true
+        },
+        {
+          "testname": "2.14",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671789258615"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671789261523"
+            }
+          },
+          "elapsed": 2908,
+          "correct": false
+        }
+      ]
+    }
+  }
+},{
+  "_id": {
+    "$oid": "63a58c1d230eb12e0ffafa7b"
+  },
+  "signup": {
+    "$date": {
+      "$numberLong": "1671793693843"
+    }
+  },
+  "data": {
+    "name": "Bojan L",
+    "age": "20",
+    "gender": "Male",
+    "programmer": true,
+    "programmingLanguages": [
+      {
+        "id": 1,
+        "name": "Java",
+        "selected": true
+      },
+      {
+        "id": 2,
+        "name": "JavaScript",
+        "selected": true
+      },
+      {
+        "id": 3,
+        "name": "Python",
+        "selected": true
+      },
+      {
+        "id": 4,
+        "name": "C++",
+        "selected": true
+      },
+      {
+        "id": 6,
+        "name": "C",
+        "selected": true
+      },
+      {
+        "id": 7,
+        "name": "Racket",
+        "selected": true
+      }
+    ]
+  },
+  "stats": {
+    "init": {
+      "tests": [
+        {
+          "testname": "1.1",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671793703068"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671793705469"
+            }
+          },
+          "elapsed": 2401,
+          "correct": true
+        },
+        {
+          "testname": "1.2",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671793711930"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671793714419"
+            }
+          },
+          "elapsed": 2489,
+          "correct": true
+        }
+      ]
+    },
+    "realtest": {
+      "tests": [
+        {
+          "testname": "2.1",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671793728884"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671793731926"
+            }
+          },
+          "elapsed": 3042,
+          "correct": true
+        },
+        {
+          "testname": "2.2",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671793736609"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671793740476"
+            }
+          },
+          "elapsed": 3867,
+          "correct": true
+        },
+        {
+          "testname": "2.3",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671793746058"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671793748131"
+            }
+          },
+          "elapsed": 2073,
+          "correct": false
+        },
+        {
+          "testname": "2.4",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671793753482"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671793754692"
+            }
+          },
+          "elapsed": 1210,
+          "correct": true
+        },
+        {
+          "testname": "2.5",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671793758823"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671793761019"
+            }
+          },
+          "elapsed": 2196,
+          "correct": true
+        },
+        {
+          "testname": "2.6",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671793765165"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671793766903"
+            }
+          },
+          "elapsed": 1738,
+          "correct": false
+        },
+        {
+          "testname": "2.7",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671793773138"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671793775664"
+            }
+          },
+          "elapsed": 2526,
+          "correct": true
+        },
+        {
+          "testname": "2.8",
+          "completed": true,
+          "correct": "true",
+          "elapsed": "1491",
+          "end": "2022-12-23T11:09:41.354+00:00",
+          "start": "2022-12-23T11:09:39.863+00:00"
+        },
+        {
+          "testname": "2.9",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671793779863"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671793781354"
+            }
+          },
+          "elapsed": 1491,
+          "correct": true
+        },
+        {
+          "testname": "2.10",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671793785191"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671793787323"
+            }
+          },
+          "elapsed": 2132,
+          "correct": true
+        },
+        {
+          "testname": "2.11",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671793792499"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671793795177"
+            }
+          },
+          "elapsed": 2678,
+          "correct": true
+        },
+        {
+          "testname": "2.12",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671793802159"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671793804044"
+            }
+          },
+          "elapsed": 1885,
+          "correct": true
+        },
+        {
+          "testname": "2.13",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671793807891"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671793809424"
+            }
+          },
+          "elapsed": 1533,
+          "correct": true
+        },
+        {
+          "testname": "2.14",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671793813400"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671793816548"
+            }
+          },
+          "elapsed": 3148,
+          "correct": true
+        }
+      ]
+    }
+  }
+},{
+  "_id": {
+    "$oid": "63a58e22fc9fb884a8f280ff"
+  },
+  "signup": {
+    "$date": {
+      "$numberLong": "1671794210688"
+    }
+  },
+  "data": {
+    "name": "Harkeerat Singh Sawhney",
+    "age": "20",
+    "gender": "Male",
+    "programmer": true,
+    "programmingLanguages": [
+      {
+        "id": 1,
+        "name": "Java",
+        "selected": true
+      },
+      {
+        "id": 2,
+        "name": "JavaScript",
+        "selected": true
+      },
+      {
+        "id": 3,
+        "name": "Python",
+        "selected": true
+      },
+      {
+        "id": 4,
+        "name": "C++",
+        "selected": true
+      },
+      {
+        "id": 6,
+        "name": "C",
+        "selected": true
+      }
+    ]
+  },
+  "stats": {
+    "init": {
+      "tests": [
+        {
+          "testname": "1.1",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671794247731"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671794253061"
+            }
+          },
+          "elapsed": 5330,
+          "correct": false
+        },
+        {
+          "testname": "1.2",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671794259837"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671794263464"
+            }
+          },
+          "elapsed": 3627,
+          "correct": true
+        }
+      ]
+    },
+    "realtest": {
+      "tests": [
+        {
+          "testname": "2.1",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671794270004"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671794271671"
+            }
+          },
+          "elapsed": 1667,
+          "correct": true
+        },
+        {
+          "testname": "2.2",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671794275590"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671794278291"
+            }
+          },
+          "elapsed": 2701,
+          "correct": false
+        },
+        {
+          "testname": "2.3",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671794285512"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671794287554"
+            }
+          },
+          "elapsed": 2042,
+          "correct": true
+        },
+        {
+          "testname": "2.4",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671794292519"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671794293770"
+            }
+          },
+          "elapsed": 1251,
+          "correct": true
+        },
+        {
+          "testname": "2.5",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671794297234"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671794299150"
+            }
+          },
+          "elapsed": 1916,
+          "correct": true
+        },
+        {
+          "testname": "2.6",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671794302702"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671794303854"
+            }
+          },
+          "elapsed": 1152,
+          "correct": false
+        },
+        {
+          "testname": "2.7",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671794308321"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671794310913"
+            }
+          },
+          "elapsed": 2592,
+          "correct": true
+        },
+        {
+          "testname": "2.8",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671794314485"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671794316128"
+            }
+          },
+          "elapsed": 1643,
+          "correct": true
+        },
+        {
+          "testname": "2.9",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671794319714"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671794322109"
+            }
+          },
+          "elapsed": 2395,
+          "correct": true
+        },
+        {
+          "testname": "2.10",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671794326102"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671794327718"
+            }
+          },
+          "elapsed": 1616,
+          "correct": false
+        },
+        {
+          "testname": "2.11",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671794333467"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671794335051"
+            }
+          },
+          "elapsed": 1584,
+          "correct": true
+        },
+        {
+          "testname": "2.12",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671794338298"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671794339799"
+            }
+          },
+          "elapsed": 1501,
+          "correct": true
+        },
+        {
+          "testname": "2.13",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671794343110"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671794345375"
+            }
+          },
+          "elapsed": 2265,
+          "correct": true
+        },
+        {
+          "testname": "2.14",
+          "completed": true,
+          "start": {
+            "$date": {
+              "$numberLong": "1671794348616"
+            }
+          },
+          "end": {
+            "$date": {
+              "$numberLong": "1671794349568"
+            }
+          },
+          "elapsed": 952,
+          "correct": true
+        }
+      ]
+    }
+  }
+}]

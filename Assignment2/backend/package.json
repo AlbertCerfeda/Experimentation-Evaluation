@@ -28,5 +28,6 @@
     "parserOptions": {
       "sourceType": "module"
     }
-  }
+  },
+  "license": "MIT"
 }
